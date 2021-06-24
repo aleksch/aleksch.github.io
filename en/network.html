@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Network</title>
+<link href="../style.8436e7a52977778a43c0.css" rel="stylesheet"></head>
+<body class="network-page">
+  <header class="header">
+    <div class="header__logo">
+      <img src="../images/hackerdom_176.96f2450be1cb255c7e157d4dbfde5eb0.svg">
+    </div>
+    <div class="header__main-logo">
+      <img src="../images/path185.eed2ca2d4d9ca06795057c269e4c3ccb.svg">
+    </div>
+    <div class="header__menu">
+      <nav class="header__nav">
+        <ul class="nav-menu">
+          <li id="about" class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">About</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/en/team.html">Team</a></li>
+              <li class="submenu__item"><a href="/en/history.html">Our history</a></li>
+              <li class="submenu__item"><a href="/en/participant.html">Become a participant</a></li>
+              <li class="submenu__item"><a href="/en/sponsor.html">Sponsor us</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">Competition</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/en/schedule.html">Schedule</a></li>
+              <li class="submenu__item"><a href="/en/rules.html">Rules</a></li>
+              <li class="submenu__item"><a href="/en/network.html">Network</a></li>
+              <li class="submenu__item"><a href="/en/flags.html">Surrender of flags </a></li>
+              <li class="submenu__item"><a href="/en/participants.html">Participants</a></li>
+              <li class="submenu__item"><a href="/en/history.html">Results</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">Conference</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/en/schedule.html">Schedule</a></li>
+              <li class="submenu__item"><a href="#">Lectures</a></li>
+              <li class="submenu__item"><a href="#">Records</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item"><a href="/en/contacts.html">Contacts</a></li>
+          <li class="nav-menu__item nav-menu__item--lang">
+            <a id="lang-btn" href="/en/">RU</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button">
+        <a hfer="#">FOLLOW</a>
+      </button>
+      <button class="header-menu__btn"></button>
+    </div>
+  </header>
+  <main class="network-main">
+    <div class="width-control">
+      <h1 class="network__title">NETWORK SCHEME</h1>
+      <section class="network-id">
+        <div class="network-img">
+          <img src="../images/network.4b37ee92ca4c06422a7f40ab4e03ec8b.png">
+        </div>
+        <div class="network__main-text">
+          <span>Team network for team with ID N is: </span><span>10.60.1.0/24</span><span>, where A = 60 + N / 256, B = N % 256.</span>
+        </div><br>
+        <div class="network__main-text">
+          <span>If it seems difficult, just enter a team ID </span><input class="network-input"><span> to see instructions for your team. You can get team ID in config files.</span>
+        </div>
+      </section>
+      <section class="section cloud">
+        <h2 class="section__title">CLOUD</h2>
+        <span class="network__main-text">This year we will provide the hosting for your vulnerable image on our servers again. If you are hearing about it for a first time, </span>
+        <a class="network__main-link" href="/en/faq.html">our FAQ</a>
+        <span class="network__main-text"> should help.</span>
+        <br><br>
+        <span class="network__main-text">Here is an instruction how to set up image in cloud:</span>
+        <br><br>
+        <span class="network__main-text">0. Enter to the cloud web console, </span>
+        <a href="#" class="network__main-link">https://cloud.ructfe.org</a>
+        <span class="network__main-text">. The interface will be opened at 18 JUL 2021 10:00 UTC+5.</span>
+        <br><br>
+        <span class="network__main-text">1. Create the vulnerable vm</span><br>
+        <span class="network__main-text padding"># create_vm</span><br>
+        <span class="network__main-text">2. Get the vpn config to enter your network segment</span><br>
+        <span class="network__main-text padding"># get_team_openvpn_config</span><br>
+        <span class="network__main-text padding">Save as ructfe.ovpn</span><br>
+        <span class="network__main-text">3. Give the config from the previous step to every team member and run openvpn:</span><br>
+        <span class="network__main-text padding">Linux and MacOS: openvpn ructfe.ovpn</span><br>
+        <span class="network__main-text padding">Windows: right-click on ructfe.ovpn -> Start OpenVPN on this config file</span><br>
+        <span class="network__main-text">4. Connect to vulnerable vm using ssh client:</span><br>
+        <span class="network__main-text padding"># get_vm_info</span><br>
+        <span class="network__main-text">5. After initial setup, make your first vm snapshot, so you can recover to that saved state later:</span><br>
+        <span class="network__main-text padding"># take_snapshot <name></span><br>
+        <span class="network__main-text">6. If you had non-cloud setup, shut down the openvpn client on your game router.</span><br>
+        <span class="network__main-text">7. Connect vm network to the game network:</span><br>
+        <span class="network__main-text padding"># connect_vm_to_game_network</span><br>
+        <span class="network__main-text padding">Now other teams and checksystem are able to access the vm.</span><br>
+        <span class="network__main-text padding">Also, now you should be able to access other teams and checksystem (if the game network is opened, of course)</span><br>
+        <span class="network__main-text">8. Have a nice game!</span><br>
+        <br>
+        <span class="network__main-text">The next steps are required only for non-cloud setup, but we still recommend to follow them just in case.</span><br>
+      </section>
+      <section class="section setup">
+        <h2 class="section__title">SET UP VIRTUAL MACHINES</h2>
+        <span class="network__main-text">1. Install VirtualBox.</span><br>
+        <span class="network__main-text">2. Download router and test images</span><br>
+        <span class="network__main-text">3. Check SHA256 sums:</span><br>
+        <span class="network__main-text padding">&mdash;&nbsp;</span><wbr>
+        <span class="network__main-text wrap">5fdc706895ed2b68da899bc78c27db441c8b451ab5077b45d7285f2a1fa672d6</span><br>&nbsp;&nbsp;&nbsp;
+        <span class="network__main-text padding">RuCTFE2020_Router.ova</span><br>
+        <span class="network__main-text padding">&mdash;&nbsp;</span><wbr>
+        <span class="network__main-text wrap">10d1fb39bd3ec45969448dd0812749a956adcc28f58ee96ea28efeab3af99fab</span><br>&nbsp;&nbsp;&nbsp;
+        <span class="network__main-text padding">RuCTFE2020_TestImage.ova</span><br><br>
+        <span class="network__main-text">(4) Import both images to VirtualBox: 'File->Import Appliance...</span><br><br>
+        <span class="network__main-text">(5) Check router image settings. Go to: 'Settings->Network->Adapter2'. Make sure that it is bridged to your real, hardware network adapter. It is preferable to use Ethernet adapters for bridging rather than Wi-Fi adapters.</span><br><br>
+        <span class="network__main-text">(6)Check test image settings. Make sure that Adapter1 is bridged to your real network adapter.</span><br><br>
+        <span class="network__main-text">(7)Start both virtual machines. You will see some instructions on a logon screen.</span><br><br>
+        <span class="network__main-text">(8)Follow instructions on the logon screen and enter your team number to configure the network:</span><br>
+        <span class="network__main-text">router image:</span><br>
+        <span class="network__main-text">eth0 - this is your uplink. Address is obtained via dhcp by default. This interface is attached to NAT in VirtualBox, so make sure that you have an internet connection on your physical host;</span><br>
+        <span class="network__main-text">eth1 - this is your internal interface. It should be automatically set to: 10.60.1.1.</span><br>
+        <span class="network__main-text">test image:</span><br>
+        <span class="network__main-text">eth0 - it should be automatically set to: 10.60.1.3 and gateway: 10.60.1.1.</span><br><br>
+        <span class="network__main-text">(9)You should use following network settings for your team's PCs during the game (or virtual machines setup):</span><br><br>
+        <div class="network-setting">
+          <p class="network__main-text setting">
+            IP = 10.60.1.128&nbsp;&mdash; 10.60.1.255<br>
+            Netmask = 255.255.255.0<br>
+            Gateway = 10.60.1.1<br>
+            DNS = 8.8.8.8
+          </p>
+        </div>
+      </section>
+      <section class="section connection">
+        <h2 class="section__title">SET UP VPN CONNECTION</h2>
+        &nbsp;&nbsp;<span class="network__main-text">1 Follow the instructions sent on your PoC email (if not, please send message to info@ructf.org or Vik at Slack) to obtain your OpenVPN config.</span><br><br>
+        &nbsp;&nbsp;<span class="network__main-text">2 Copy the config to /etc/openvpn/*.conf (for example to /etc/openvpn/ructfe.conf).</span><br><br>
+        &nbsp;&nbsp;<span class="network__main-text">3 Restart OpenVPN on your router (service restart openvpn@ructfe if your confing has name ructfe.conf).</span><br><br>
+        &nbsp;&nbsp;<span class="network__main-text">4 Check network connectivity. You should be able to ping 10.80.1.1 from your router and testimage (C = 80 + N / 256, N is your team ID). Check your connection status at http://vpn.ructfe.org/ (all tests for your team should pass, the page updates once in a few minutes)</span><br><br>
+        &nbsp;&nbsp;<span class="network__main-text">5 Leave both images running. You can shut down your testimage when the game starts.</span><br><br>
+      </section>
+  </div></main>
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-main-logo"></div>
+      <div class="footer-main-hackerdom"></div>
+      <div class="footer-links">
+        <div class="footer-title">News</div>
+        <div class="footer-links-wrapper">
+          <a class="link-item icon-telegram" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
+          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter" target="_blank" rel="noopener"></a>
+          <a href="https://vk.com/ructf" class="link-item icon-vk" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube" target="_blank" rel="noopener"></a>
+          <a href="https://github.com/hackerdom" class="link-item icon-github" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta" target="_blank" rel="noopener"></a>
+          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-about">
+      <div class="footer-title">About</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="/en/team.html">Team</a></li>
+          <li><a class="footer-menu-item" href="/en/participant.html">Become a participant</a></li>
+          <li><a class="footer-menu-item" href="/en/history.html">History</a></li>
+          <li><a class="footer-menu-item" href="/en/sponsor.html">Sponsor us</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-competitions">
+      <div class="footer-title">Competition</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="/en/schedule.html">Schedule</a></li>
+          <li><a class="footer-menu-item" href="/en/flags.html">Surrender of flags</a></li>
+          <li><a class="footer-menu-item" href="/en/rules.html">Rules</a></li>
+          <li><a class="footer-menu-item" href="/en/participants.html">Participants</a></li>
+          <li><a class="footer-menu-item" href="/en/network.html">Network</a></li>
+          <li><a class="footer-menu-item" href="#">Results</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-conference">
+      <div class="footer-title">Conference</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="#">Schedule</a></li>
+          <li><a class="footer-menu-item" href="#">Speakers</a></li>
+          <li><a class="footer-menu-item" href="#">Lectures</a></li>
+          <li><a class="footer-menu-item" href="#">Records</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-contacts">
+      <div class="footer-title">Contacts</div>
+      <a class="email" href="mailto: info@ructf.org">info@ructf.org</a>
+      <a class="phone" href="tel:+79995655535">+7 999 565 55 35</a>
+    </div>
+  </footer>
+<script src=".././js/main.804c74c1edb628513cfc.js"></script></body>
+</html>
