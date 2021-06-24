@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RuCTF RULES</title>
+<link href="../style.8436e7a52977778a43c0.css" rel="stylesheet"></head>
+<body class="rules-page">
+  <header class="header">
+    <div class="header__logo">
+      <img src="../images/hackerdom_176.96f2450be1cb255c7e157d4dbfde5eb0.svg">
+    </div>
+    <div class="header__main-logo">
+      <img src="../images/path185.eed2ca2d4d9ca06795057c269e4c3ccb.svg">
+    </div>
+    <div class="header__menu">
+      <nav class="header__nav">
+        <ul class="nav-menu">
+          <li id="about" class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">About</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/en/team.html">Team</a></li>
+              <li class="submenu__item"><a href="/en/history.html">Our history</a></li>
+              <li class="submenu__item"><a href="/en/participant.html">Become a participant</a></li>
+              <li class="submenu__item"><a href="/en/sponsor.html">Sponsor us</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">Competition</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/en/schedule.html">Schedule</a></li>
+              <li class="submenu__item"><a href="/en/rules.html">Rules</a></li>
+              <li class="submenu__item"><a href="/en/network.html">Network</a></li>
+              <li class="submenu__item"><a href="/en/flags.html">Surrender of flags </a></li>
+              <li class="submenu__item"><a href="/en/participants.html">Participants</a></li>
+              <li class="submenu__item"><a href="/en/history.html">Results</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">Conference</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/en/schedule.html">Schedule</a></li>
+              <li class="submenu__item"><a href="#">Lectures</a></li>
+              <li class="submenu__item"><a href="#">Records</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item"><a href="/en/contacts.html">Contacts</a></li>
+          <li class="nav-menu__item nav-menu__item--lang">
+            <a id="lang-btn" href="/en/">RU</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button">
+        <a hfer="#">FOLLOW</a>
+      </button>
+      <button class="header-menu__btn"></button>
+    </div>
+  </header>
+  <div class="content">
+    <h1 class="title">RuCTF RULES</h1>
+    <section class="rules-description">
+      <p>Servers with a pre-installed set of vulnerable services.</p>
+      <p>The task of the participants is finding vulnerabilities, closing them on their own and using them to retrieve private information (flags) from their opponents. The game is continuously monitored by the checking jury system, regularly placing new flags on the teams' servers. In addition, the system accepts from the teams flags captured from the opponents.</p>
+      <p>TIt is difficult to give a complete set of rules for a CTF challenge, so these rules can change without notice at any moment prior to game start. That is why we recommend checking the rules one more time before the competition starts. Just in case :)</p>
+    </section>
+    <section class="rules-definitions">
+      <div class="section-title">DEFINITIONS</div>
+      <div class="rules-definitions-list">
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Team:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">A group of people led by the captain. The size of any team except the visiting team shall not exceed 7 members.</div>
+        </div>
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Service:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">A vulnerable application specially prepared by the development team for the game.</div>
+        </div>
+
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Flag:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">A string that matches regex: /^\w{31}=$/. The lifetime of a flag is limited, obsolete flags do not affect the scoring of points.</div>
+        </div>
+        <div class="rules-definitions-item check-system">
+          <div class="rules-definitions-item__title">Vulnbox:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">An automatic system that logs flags into the services, checks that the services are working properly and awards points. Scores are shown on the scorboard along with the status of the services.</div>
+        </div>
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Game round:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">A period of time for the checksystem to check and score all the teams. Game round usually takes about 1 minute.</div>
+        </div>
+        <div class="rules-definitions-item juri">
+          <div class="rules-definitions-item__title">Organizers:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">
+            <span>A group of people that run the competition. Organizers do their best to provide a quality and fun event to all participants. Still organizers are to penalize/disqualify teams for rules violation and to solve the critical situations not described in these rules. Teams should be prepared to meet such decisions with understanding. Also organizers do determine the winner. In general, this decision is based on the scoreboard.</span>
+            <br><br>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="rules-more">
+      <section class="rules-allowed">
+        <div class="section-title">TEAMS ARE ALLOWED TO</div>
+        <ul class="list">
+          <li class="list-item">Do whatever they want within their network segment. Most likely the team would like to patch vulnerabilities in their services or block exploitation of vulnerabilities;</li>
+          <li class="list-item">Attack other teams. Didn't expect that, huh?</li>
+        </ul>
+      </section>
+      <section class="rules-allowed">
+        <div class="section-title">TEAMS ARE PROHIBITED TO</div>
+        <ul class="list">
+          <li class="list-item">Attack the game infrastructure operated by organizers;</li>
+          <li class="list-item">Attack the game infrastructure operated by organizers;</li>
+          <li class="list-item">Generate excessive amounts of traffic that pose a threat to network stability of any other team</li>
+        </ul>
+      </section>
+    </div>
+    <section class="rules-game-progress">
+      <div class="section-title">GAME PROCESS</div>
+      <div class="description">The game starts by issuing the participants identical servers with a pre-defined set of vulnerable services. For the first hour after the game image is issued, the network segments are closed, and teams should concentrate on administering their game server and analyzing the vulnerabilities. After this hour, the network opens and for 8 hours teams can exploit vulnerabilities to gain flags from other teams.</div>
+    </section>
+
+    <section class="rules-points-accrual">
+      <div class="section-title">SCORING SYSTEM</div>
+      <div class="description">
+        <p>Key parameters in the scoring system are SLA and FlagPoints. Their values are individual for each service of each team. Team score is calculated as the sum of the products of the corresponding SLA and FlagPoints of all team's services.</p>
+        <p>
+          <b>SLA(team, service)</b>
+          <span> is the fraction of the game time in which that service of that team was in the UP state. E.g. if the service was always UP, SLA would be 1. If 4 hours passed from the game start and the service was UP during the first hour and then was not UP for the rest 3 hours, SLA would be 0.25. At the beginning of the game all teams have SLA equal to 1.</span>
+        </p>
+        <p>
+          <b>FlagPoints(team, service)</b>
+          <span> is the number that correlates with a team's ‘understanding’ of the service. FlagPoints depend on the team attack capabilities (exploiting vulnerabilities against other teams) and defense capabilities (fixing vulnerabilities in their own service). At the beginning of the game all teams have equal FlagPoints, and FlagPoints are updated every game round. If during the round the team failed both in attack and defense of the service, the corresponding FlagPoints will decrease, but will never reach 0. If during the round, the team was only able to defend the service, the corresponding FlagPoints will not change. If the team was able both to attack and to defend, the corresponding FlagPoints will grow.</span>
+        </p>
+        <p>
+          <b>Flag price</b>
+          <span> is the number of FlagPoints got by attackers for stealing the flag from the victim.</span>
+        </p>
+        <p>
+          <b>Flag lifetime</b>
+          <span> is the amount of time during which the flag must be available in the service for the checksystem. At RuCTFE it's 15 rounds. Teams should steal the flag and post it to the checksystem until it is expired.</span>
+        </p>
+        <p>The maximum amount of points awarded/deducted for the flag is equal to the number of the participating teams. If a flag was stolen from a team that was higher on the scoreboard in the previous round, the team that has stolen the flag earns the maximum number of FlagPoints. If a flag was stolen from a team that was below your team on the scoreboard, the number of FlagPoints will decrease based on the difference in teams' positions on the scoreboard, but will never go below 1. FlagPoints for a flag are awarded when that flag expires.</p>
+        <p>Luckily all this complex text can be expressed in pseudocode:</p>
+      </div>
+      <div class="code-listing">
+      <pre>
+  def on_game_start(team):
+    team.sla = [1] * number_of_services
+    team.flagpoints = [0] * number_of_services
+
+  def on_flag_post(attacker, flag):
+    victim = flag.owner
+    victim_pos = scoreboard[victim]
+    attacker_pos = scoreboard[attacker]
+    service = flag.service
+    max = number_of_teams
+
+  flag_score = attacker_pos > victim_pos ? max : exp(log(max) * (max - victim_pos) / (max - attacker_pos))
+
+  attacker.flagpoints[service] += flag_score
+  victim.flagpoints[service] -= min(victim.flagpoints[service], flag_score)
+
+  def get_score(team):
+    return sum(map(lambda x: x[0] * x[1],
+    zip(team.sla, team.flagpoints)))
+    </pre>
+    </div>
+    <p>Apart from FlagPoints, SLA and total score, the scoreboard shows the state of each service. There are four possible states of a service:</p>
+    <p>
+      <span>UP — means that service is online, serves the requests, stores and returns flags and behaves as expected.</span>
+      <br>
+      <span>CORRUPT — means that service is online, but past flags cannot be retrieved.</span>
+      <br>
+      <span>MUMBLE — means that service is online, but behaves not as expected, e.g. if HTTP server listens the port, but doesn't respond on request.</span>
+      <br>
+      <span>DOWN — means that service is offline.</span>
+      <br>
+    </p>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-main-logo"></div>
+      <div class="footer-main-hackerdom"></div>
+      <div class="footer-links">
+        <div class="footer-title">News</div>
+        <div class="footer-links-wrapper">
+          <a class="link-item icon-telegram" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
+          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter" target="_blank" rel="noopener"></a>
+          <a href="https://vk.com/ructf" class="link-item icon-vk" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube" target="_blank" rel="noopener"></a>
+          <a href="https://github.com/hackerdom" class="link-item icon-github" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta" target="_blank" rel="noopener"></a>
+          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-about">
+      <div class="footer-title">About</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="/en/team.html">Team</a></li>
+          <li><a class="footer-menu-item" href="/en/participant.html">Become a participant</a></li>
+          <li><a class="footer-menu-item" href="/en/history.html">History</a></li>
+          <li><a class="footer-menu-item" href="/en/sponsor.html">Sponsor us</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-competitions">
+      <div class="footer-title">Competition</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="/en/schedule.html">Schedule</a></li>
+          <li><a class="footer-menu-item" href="/en/flags.html">Surrender of flags</a></li>
+          <li><a class="footer-menu-item" href="/en/rules.html">Rules</a></li>
+          <li><a class="footer-menu-item" href="/en/participants.html">Participants</a></li>
+          <li><a class="footer-menu-item" href="/en/network.html">Network</a></li>
+          <li><a class="footer-menu-item" href="#">Results</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-conference">
+      <div class="footer-title">Conference</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="#">Schedule</a></li>
+          <li><a class="footer-menu-item" href="#">Speakers</a></li>
+          <li><a class="footer-menu-item" href="#">Lectures</a></li>
+          <li><a class="footer-menu-item" href="#">Records</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-contacts">
+      <div class="footer-title">Contacts</div>
+      <a class="email" href="mailto: info@ructf.org">info@ructf.org</a>
+      <a class="phone" href="tel:+79995655535">+7 999 565 55 35</a>
+    </div>
+  </footer>
+<script src=".././js/main.804c74c1edb628513cfc.js"></script></body>
+</html>

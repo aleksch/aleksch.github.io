@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ПРАВИЛА RuCTF</title>
+<link href="style.8436e7a52977778a43c0.css" rel="stylesheet"></head>
+<body class="rules-page">
+  <header class="header">
+    <div class="header__logo">
+      <img src="images/hackerdom_176.96f2450be1cb255c7e157d4dbfde5eb0.svg">
+    </div>
+    <div class="header__main-logo">
+      <img src="images/path185.eed2ca2d4d9ca06795057c269e4c3ccb.svg">
+    </div>
+    <div class="header__menu">
+      <nav class="header__nav">
+        <ul class="nav-menu">
+          <li id="about" class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">О&nbsp;RuCTF</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/team.html">Команда</a></li>
+              <li class="submenu__item"><a href="/history.html">Наша история</a></li>
+              <li class="submenu__item"><a href="/participant.html">Стать участником</a></li>
+              <li class="submenu__item"><a href="/sponsor.html">Стать партнером</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">Сревнования</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/schedule.html">Расписание</a></li>
+              <li class="submenu__item"><a href="/rules.html">Правила</a></li>
+              <li class="submenu__item"><a href="/network.html">Сесть</a></li>
+              <li class="submenu__item"><a href="/flags.html">Сдача флагов</a></li>
+              <li class="submenu__item"><a href="/participants.html">Участники</a></li>
+              <li class="submenu__item"><a href="/history.html">Результаты</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-menu__item">
+            <div class="item__text-arrow">
+              <span class="item-text">Конференция</span>
+              <div class="item-arrow"></div>
+            </div>
+            <ul class="submenu">
+              <li class="submenu__item"><a href="/schedule.html">Расписание</a></li>
+              <li class="submenu__item"><a href="#">Доклады</a></li>
+              <li class="submenu__item"><a href="#">Записи</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item"><a href="/contacts.html">КОНТАКТЫ</a></li>
+          <li class="nav-menu__item nav-menu__item--lang">
+            <a id="lang-btn" href="/">EN</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__button">
+        <a hfer="#">СТАТЬ ЗРИТЕЛЕМ</a>
+      </button>
+      <button class="header-menu__btn"></button>
+    </div>
+  </header>
+  <div class="content">
+    <h1 class="title">ПРАВИЛА RuCTF</h1>
+    <section class="rules-description">
+      <p>В начале игры команды получают идентичные серверы с предустановленным набором уязвимых сервисов</p>
+      <p>Задача участников — найти уязвимости, закрыть их у себя и воспользоваться ими для получения приватной информации (флагов) у соперников. За процессом игры непрерывно следит проверяющая система жюри, регулярно помещая новые флаги на серверы команд. Кроме того, система принимает от команд флаги, захваченные у соперников.</p>
+      <p>Очень непросто формализовать набор правил, по которым проводится CTF, поэтому этот раздел может поменяться в любой момент до начала игры. Не забудьте перед игрой прочитать его еще раз, на всякий случай :)</p>
+    </section>
+    <section class="rules-definitions">
+      <div class="section-title">ОПРЕДЕЛЕНИЯ</div>
+      <div class="rules-definitions-list">
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Команда:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">Группа людей во главе с капитаном. Размер любой команды за исключением сборной гостевой не должен превышать 7 человек.</div>
+        </div>
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Сервис:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">Уязвимое приложение, специально подготовленное командой разработчиков для игры.</div>
+        </div>
+
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Флаг:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">Строка, удовлетворяющая регулярному выражению: /^\w{31}=$/. Время жизни флага ограничено, и устаревшие флаги не влияют на начисление очков.</div>
+        </div>
+        <div class="rules-definitions-item check-system">
+          <div class="rules-definitions-item__title">Проверяющая система:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">Автоматическая система, которая заносит в сервисы флаги, проверяет работоспособность сервисов и начисляет очки. Начисленные очки наряду с состоянием сервисов отображаются в скорборде.</div>
+        </div>
+        <div class="rules-definitions-item">
+          <div class="rules-definitions-item__title">Игровой раунд:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">Промежуток времени, за который проверяющая система заносит в сервисы новые флаги, проверяет наличие старых флагов, и начисляет очки за защиту. Все раунды длятся равное количество времени, от 1 минуты, в зависимости от игры.</div>
+        </div>
+        <div class="rules-definitions-item juri">
+          <div class="rules-definitions-item__title">Жюри:</div>
+          <div class="rules-definitions-item__line"></div>
+          <div class="rules-definitions-item__description">
+            <span>Группа людей, ответственная за проведение игры. Жюри делает все возможное для того, чтобы игра получилась качественной, честной, и доставила участникам удовольствие. Тем не менее, жюри может наказать или дисквалифицировать команду за нарушение правил, а также может принимать решения в критических ситуациях, не описанных в данных правилах.</span>
+            <br><br>
+            <span>Команды должны быть готовы отнестись к таким решениям с пониманием. Также жюри определяет победителя. По большей части, это решение основывается на скорборде.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="rules-more">
+      <section class="rules-allowed">
+        <div class="section-title">Командам разрешено</div>
+        <ul class="list">
+          <li class="list-item">Делать все, что заблагорассудится внутри своего сегмента сети. Скорее всего, команды захотят изменить конфигурацию своего сервера и закрыть уязвимости в своих сервисах;</li>
+          <li class="list-item">Атаковать другие команды в пределах игровой сети. Неожиданно, да?</li>
+        </ul>
+      </section>
+      <section class="rules-allowed">
+        <div class="section-title">Командам ЗАПРЕЩЕНО</div>
+        <ul class="list">
+          <li class="list-item">Атаковать системы организаторов;</li>
+          <li class="list-item">Фильтровать трафик от других команд;</li>
+          <li class="list-item">Генерировать большой объем трафика, представляющий угрозу стабильности систем организаторов или других команд.</li>
+        </ul>
+      </section>
+    </div>
+    <section class="rules-game-progress">
+      <div class="section-title">Ход игры</div>
+      <div class="description">Игра начинается с выдачи участникам идентичных серверов с предустановленным набором уязвимых сервисов. В течение первого часа после выдачи игрового образа сегменты сети закрыты, и командам следует сконцентрироваться на администрировании своего игрового сервера и анализе уязвимостей. По истечение этого часа сеть открывается, и в течение 8 часов команды могут эксплуатировать уязвимости с целью получения флагов у других команд.</div>
+    </section>
+
+    <section class="rules-points-accrual">
+      <div class="section-title">Начисление баллов</div>
+      <div class="description">
+        <p>Ключевыми понятиями в начислении очков являются понятия SLA и FlagPoints. Эти величины индивидуальны для каждого сервиса каждой команды. В каждый момент времени очки команды вычисляются как сумма попарных произведений SLA сервиса на FlagPoints сервиса для всех сервисов.</p>
+        <p>
+          <b>SLA(team, service)</b>
+          <span> — это доля от прошедшего игрового времени, в течение которой данный сервис у данной команды был в состоянии UP. Например, если сервис ни разу за прошедшее игровое время не опускался, SLA будет равен 1. Если прошло 4 часа игры, и сервис работал первый час, а потом опустился на 3 часа, SLA будет равен 0.25.</span>
+        </p>
+        <p>
+          <b>FlagPoints(team, service)</b>
+          <span> — это неотрицательное число, которое коррелирует с тем, насколько хорошо команда понимает данный сервис. Если команда умеет эксплуатировать уязвимости в этом сервисе, и закрыла их у себя, ее FlagPoints будет расти. Если она не умеет эксплуатировать уязвимости в этом сервисе и не озаботилась их закрытием, ее FlagPoints будет стремительно приближаться к нулю в результате атак других команд. Если она закрыла уязвимости, но не научилась их эксплуатировать, ее FlagPoints не будет меняться. В начале игры значение FlagPoints всех сервисов у всех команд равно количеству команд в игре.</span>
+        </p>
+        <p>
+          <b>Стоимость флага</b>
+          <span> — это количество FlagPoints, которое получает атакующая команда и, соответственно, теряет атакуемая за захваченный флаг, сданный атакующей командой в проверяющую систему. Это число зависит от мест в скорборде, занимаемых атакующей и атакуемой командами в прошлом раунде относительно момента сдачи флага. Очки за флаг засчитываются даже если соответствующий сервис атакующей команды не был в состоянии UP.</span>
+        </p>
+        <p>
+          <b>Время жизни флага</b>
+          <span> — это количество времени, в течение которого флаг должен быть доступен в сервисе для запросов проверяющей системы. Для получения FlagPoints, команде нужно успеть захватывать и сдавать в проверяющую систему флаги до того как у них истекает время жизни.</span>
+        </p>
+        <p>Если флаг захватывается у команды, находившейся в скорборде выше атакующей в предыдущем раунде, то за него атакующей команде начисляется максимальное количество FlagPoints. Это число равно количеству играющих команд. В противном случае, начисляемое количество FlagPoints экспоненциально падает от максимального к 1. Атакуемая команда, соответственно, теряет то же самое количество FlagPoints, но их итоговое количество у нее никогда не опускается ниже нуля.</p>
+        <p>К счастью, весь этот сложный текст можно лаконично изложить в виде псевдокода:</p>
+      </div>
+      <div class="code-listing">
+      <pre>
+  def on_game_start(team):
+    team.sla = [1] * number_of_services
+    team.flagpoints = [0] * number_of_services
+
+  def on_flag_post(attacker, flag):
+    victim = flag.owner
+    victim_pos = scoreboard[victim]
+    attacker_pos = scoreboard[attacker]
+    service = flag.service
+    max = number_of_teams
+
+  flag_score = attacker_pos > victim_pos ? max : exp(log(max) * (max - victim_pos) / (max - attacker_pos))
+
+  attacker.flagpoints[service] += flag_score
+  victim.flagpoints[service] -= min(victim.flagpoints[service], flag_score)
+
+  def get_score(team):
+    return sum(map(lambda x: x[0] * x[1],
+    zip(team.sla, team.flagpoints)))
+    </pre>
+    </div>
+    <p>Помимо текущих результатов, скорборд отображает SLA, FlagPoints и статус каждого сервиса у каждой команды. Статусы бывают такими:</p>
+    <p>
+      <span>— UP означает, что сервис доступен по сети, отвечает на запросы и ведет себя так, как того ожидает проверяющая система.</span>
+      <br>
+      <span>— CORRUPT означает, что сервис доступен по сети, но не может отдать один из предыдущих флагов.</span>
+      <br>
+      <span>— MUMBLE означает, что сервис доступен по сети, но ведет себя не так, как того ожидает проверяющая система. Например, если HTTP сервер не отвечает на запросы.</span>
+      <br>
+      <span>— DOWN означает, что сервис недоступен по сети.</span>
+      <br>
+    </p>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-main-logo"></div>
+      <div class="footer-main-hackerdom"></div>
+      <div class="footer-links">
+        <div class="footer-title">Новости</div>
+        <div class="footer-links-wrapper">
+          <a class="link-item icon-telegram" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
+          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter" target="_blank" rel="noopener"></a>
+          <a href="https://vk.com/ructf" class="link-item icon-vk" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube" target="_blank" rel="noopener"></a>
+          <a href="https://github.com/hackerdom" class="link-item icon-github" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta" target="_blank" rel="noopener"></a>
+          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-about">
+      <div class="footer-title">О RuCTF</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="/team.html">Команда</a></li>
+          <li><a class="footer-menu-item" href="/participant.html">Стать участником</a></li>
+          <li><a class="footer-menu-item" href="/history.html">История</a></li>
+          <li><a class="footer-menu-item" href="/sponsor.html">Стать партнером</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-competitions">
+      <div class="footer-title">Сревнования</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="/schedule.html">Расписание</a></li>
+          <li><a class="footer-menu-item" href="/flags.html">Сдача флагов</a></li>
+          <li><a class="footer-menu-item" href="/rules.html">Правила</a></li>
+          <li><a class="footer-menu-item" href="/participants.html">Участники</a></li>
+          <li><a class="footer-menu-item" href="/network.html">Схема сети</a></li>
+          <li><a class="footer-menu-item" href="#">Результаты</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-conference">
+      <div class="footer-title">Конференция</div>
+      <div class="footer-grid-menu-wrapper">
+        <ul>
+          <li><a class="footer-menu-item" href="#">Расписание</a></li>
+          <li><a class="footer-menu-item" href="#">Спикеры</a></li>
+          <li><a class="footer-menu-item" href="#">Доклады</a></li>
+          <li><a class="footer-menu-item" href="#">Записи</a></li>
+        <ul>
+      </ul></ul></div>
+    </div>
+    <div class="footer-contacts">
+      <div class="footer-title">Контакты</div>
+      <a class="email" href="mailto: info@ructf.org">info@ructf.org</a>
+      <a class="phone" href="tel:+79995655535">+7 999 565 55 35</a>
+    </div>
+  </footer>
+<script src="./js/main.804c74c1edb628513cfc.js"></script></body>
+</html>
