@@ -5,21 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Network</title>
-<link href="../style.40ef25083fcee1c3ccc9.css" rel="stylesheet"></head>
+<link href="../style.4136363f9f11b286c2c1.css" rel="stylesheet"></head>
 <body class="network-page">
   <header class="header">
-    <div class="header__logo">
-      <img src="../images/hackerdom_176.96f2450be1cb255c7e157d4dbfde5eb0.svg">
-    </div>
-    <div class="header__main-logo">
+    <a class="header__logo" href="/en/">
+      <img src="../images/header-man-logo.19cc6ba3e6e77d2bb8d67428b90c2996.svg">
+    </a>
+    <a class="header__main-logo" href="/en/">
       <img src="../images/path185.eed2ca2d4d9ca06795057c269e4c3ccb.svg">
-    </div>
+    </a>
     <div class="header__menu">
       <nav class="header__nav">
         <ul class="nav-menu">
           <li id="about" class="nav-menu__item">
             <div class="item__text-arrow">
-              <span class="item-text">About</span>
+              <span class="item-text-initial">About</span>
               <div class="item-arrow"></div>
             </div>
             <ul class="submenu">
@@ -51,8 +51,8 @@
             </div>
             <ul class="submenu">
               <li class="submenu__item"><a href="/en/schedule.html">Schedule</a></li>
-              <li class="submenu__item"><a href="#">Lectures</a></li>
-              <li class="submenu__item"><a href="#">Records</a></li>
+              <li class="submenu__item"><a href="/en/report.html">Lectures</a></li>
+              <li class="submenu__item"><a href="/en/report.html">Records</a></li>
             </ul>
           </li>
           <li class="nav-menu__item"><a href="/en/contacts.html">Contacts</a></li>
@@ -78,10 +78,15 @@
           <img src="../images/network.4b37ee92ca4c06422a7f40ab4e03ec8b.png">
         </div>
         <div class="network__main-text">
-          <span>Team network for team with ID N is: </span><span>10.60.1.0/24</span><span>, where A = 60 + N / 256, B = N % 256.</span>
-        </div><br>
+          <span>Team network for team with ID N is: </span>
+          <span>10.<span class="network-a">A</span>.<span class="network-b">B</span>.0/24</span>
+          <span>, where A = 60 + N / 256, B = N % 256.</span>
+        </div>
+        <br>
         <div class="network__main-text">
-          <span>If it seems difficult, just enter a team ID </span><input class="network-input"><span> to see instructions for your team. You can get team ID in config files.</span>
+          <span>If it seems difficult, just enter a team ID </span>
+          <input class="network-input" type="number" min="1" max="701">
+          <span> to see instructions for your team. You can get team ID in config files.</span>
         </div>
       </section>
       <section class="section cloud">
@@ -164,13 +169,13 @@
       <div class="footer-links">
         <div class="footer-title">News</div>
         <div class="footer-links-wrapper">
-          <a class="link-item icon-telegram" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
-          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter" target="_blank" rel="noopener"></a>
-          <a href="https://vk.com/ructf" class="link-item icon-vk" target="_blank" rel="noopener"></a>
-          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube" target="_blank" rel="noopener"></a>
-          <a href="https://github.com/hackerdom" class="link-item icon-github" target="_blank" rel="noopener"></a>
-          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta" target="_blank" rel="noopener"></a>
-          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook" target="_blank" rel="noopener"></a>
+          <a class="link-item icon-telegram-footer" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
+          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter-footer" target="_blank" rel="noopener"></a>
+          <a href="https://vk.com/ructf" class="link-item icon-vk-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube-footer" target="_blank" rel="noopener"></a>
+          <a href="https://github.com/hackerdom" class="link-item icon-github-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook-footer" target="_blank" rel="noopener"></a>
         </div>
       </div>
     </div>
@@ -194,7 +199,7 @@
           <li><a class="footer-menu-item" href="/en/rules.html">Rules</a></li>
           <li><a class="footer-menu-item" href="/en/participants.html">Participants</a></li>
           <li><a class="footer-menu-item" href="/en/network.html">Network</a></li>
-          <li><a class="footer-menu-item" href="#">Results</a></li>
+          <li><a class="footer-menu-item" href="/en/history.html">Results</a></li>
         <ul>
       </ul></ul></div>
     </div>
@@ -202,9 +207,9 @@
       <div class="footer-title">Conference</div>
       <div class="footer-grid-menu-wrapper">
         <ul>
-          <li><a class="footer-menu-item" href="#">Schedule</a></li>
+          <li><a class="footer-menu-item" href="/en/schedule.html">Schedule</a></li>
           <li><a class="footer-menu-item" href="#">Speakers</a></li>
-          <li><a class="footer-menu-item" href="#">Lectures</a></li>
+          <li><a class="footer-menu-item" href="/en/report.html">Lectures</a></li>
           <li><a class="footer-menu-item" href="#">Records</a></li>
         <ul>
       </ul></ul></div>
@@ -215,5 +220,5 @@
       <a class="phone" href="tel:+79995655535">+7 999 565 55 35</a>
     </div>
   </footer>
-<script src=".././js/main.14a66db8fdc6c4a2fce9.js"></script></body>
+<script src=".././js/main.34bc1bb680490ac71716.js"></script></body>
 </html>

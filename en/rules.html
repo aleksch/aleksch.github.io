@@ -5,21 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>RuCTF RULES</title>
-<link href="../style.40ef25083fcee1c3ccc9.css" rel="stylesheet"></head>
+<link href="../style.4136363f9f11b286c2c1.css" rel="stylesheet"></head>
 <body class="rules-page">
   <header class="header">
-    <div class="header__logo">
-      <img src="../images/hackerdom_176.96f2450be1cb255c7e157d4dbfde5eb0.svg">
-    </div>
-    <div class="header__main-logo">
+    <a class="header__logo" href="/en/">
+      <img src="../images/header-man-logo.19cc6ba3e6e77d2bb8d67428b90c2996.svg">
+    </a>
+    <a class="header__main-logo" href="/en/">
       <img src="../images/path185.eed2ca2d4d9ca06795057c269e4c3ccb.svg">
-    </div>
+    </a>
     <div class="header__menu">
       <nav class="header__nav">
         <ul class="nav-menu">
           <li id="about" class="nav-menu__item">
             <div class="item__text-arrow">
-              <span class="item-text">About</span>
+              <span class="item-text-initial">About</span>
               <div class="item-arrow"></div>
             </div>
             <ul class="submenu">
@@ -51,8 +51,8 @@
             </div>
             <ul class="submenu">
               <li class="submenu__item"><a href="/en/schedule.html">Schedule</a></li>
-              <li class="submenu__item"><a href="#">Lectures</a></li>
-              <li class="submenu__item"><a href="#">Records</a></li>
+              <li class="submenu__item"><a href="/en/report.html">Lectures</a></li>
+              <li class="submenu__item"><a href="/en/report.html">Records</a></li>
             </ul>
           </li>
           <li class="nav-menu__item"><a href="/en/contacts.html">Contacts</a></li>
@@ -142,25 +142,25 @@
     <section class="rules-points-accrual">
       <div class="section-title">SCORING SYSTEM</div>
       <div class="description">
-        <p>Key parameters in the scoring system are SLA and FlagPoints. Their values are individual for each service of each team. Team score is calculated as the sum of the products of the corresponding SLA and FlagPoints of all team's services.</p>
-        <p>
+        <p class="description__item">Key parameters in the scoring system are SLA and FlagPoints. Their values are individual for each service of each team. Team score is calculated as the sum of the products of the corresponding SLA and FlagPoints of all team's services.</p>
+        <p class="description__item">
           <b>SLA(team, service)</b>
           <span> is the fraction of the game time in which that service of that team was in the UP state. E.g. if the service was always UP, SLA would be 1. If 4 hours passed from the game start and the service was UP during the first hour and then was not UP for the rest 3 hours, SLA would be 0.25. At the beginning of the game all teams have SLA equal to 1.</span>
         </p>
-        <p>
+        <p class="description__item">
           <b>FlagPoints(team, service)</b>
           <span> is the number that correlates with a team's ‘understanding’ of the service. FlagPoints depend on the team attack capabilities (exploiting vulnerabilities against other teams) and defense capabilities (fixing vulnerabilities in their own service). At the beginning of the game all teams have equal FlagPoints, and FlagPoints are updated every game round. If during the round the team failed both in attack and defense of the service, the corresponding FlagPoints will decrease, but will never reach 0. If during the round, the team was only able to defend the service, the corresponding FlagPoints will not change. If the team was able both to attack and to defend, the corresponding FlagPoints will grow.</span>
         </p>
-        <p>
+        <p class="description__item">
           <b>Flag price</b>
           <span> is the number of FlagPoints got by attackers for stealing the flag from the victim.</span>
         </p>
-        <p>
+        <p class="description__item">
           <b>Flag lifetime</b>
           <span> is the amount of time during which the flag must be available in the service for the checksystem. At RuCTFE it's 15 rounds. Teams should steal the flag and post it to the checksystem until it is expired.</span>
         </p>
-        <p>The maximum amount of points awarded/deducted for the flag is equal to the number of the participating teams. If a flag was stolen from a team that was higher on the scoreboard in the previous round, the team that has stolen the flag earns the maximum number of FlagPoints. If a flag was stolen from a team that was below your team on the scoreboard, the number of FlagPoints will decrease based on the difference in teams' positions on the scoreboard, but will never go below 1. FlagPoints for a flag are awarded when that flag expires.</p>
-        <p>Luckily all this complex text can be expressed in pseudocode:</p>
+        <p class="description__item">The maximum amount of points awarded/deducted for the flag is equal to the number of the participating teams. If a flag was stolen from a team that was higher on the scoreboard in the previous round, the team that has stolen the flag earns the maximum number of FlagPoints. If a flag was stolen from a team that was below your team on the scoreboard, the number of FlagPoints will decrease based on the difference in teams' positions on the scoreboard, but will never go below 1. FlagPoints for a flag are awarded when that flag expires.</p>
+        <p class="description__item">Luckily all this complex text can be expressed in pseudocode:</p>
       </div>
       <div class="code-listing">
       <pre>
@@ -175,7 +175,7 @@
     service = flag.service
     max = number_of_teams
 
-  flag_score = attacker_pos > victim_pos ? max : exp(log(max) * (max - victim_pos) / (max - attacker_pos))
+  <code>flag_score = attacker_pos > victim_pos ? max : exp(log(max) * (max - victim_pos) / (max - attacker_pos))</code>
 
   attacker.flagpoints[service] += flag_score
   victim.flagpoints[service] -= min(victim.flagpoints[service], flag_score)
@@ -185,7 +185,7 @@
     zip(team.sla, team.flagpoints)))
     </pre>
     </div>
-    <p>Apart from FlagPoints, SLA and total score, the scoreboard shows the state of each service. There are four possible states of a service:</p>
+    <p class="description__item">Apart from FlagPoints, SLA and total score, the scoreboard shows the state of each service. There are four possible states of a service:</p>
     <p>
       <span>UP — means that service is online, serves the requests, stores and returns flags and behaves as expected.</span>
       <br>
@@ -205,13 +205,13 @@
       <div class="footer-links">
         <div class="footer-title">News</div>
         <div class="footer-links-wrapper">
-          <a class="link-item icon-telegram" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
-          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter" target="_blank" rel="noopener"></a>
-          <a href="https://vk.com/ructf" class="link-item icon-vk" target="_blank" rel="noopener"></a>
-          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube" target="_blank" rel="noopener"></a>
-          <a href="https://github.com/hackerdom" class="link-item icon-github" target="_blank" rel="noopener"></a>
-          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta" target="_blank" rel="noopener"></a>
-          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook" target="_blank" rel="noopener"></a>
+          <a class="link-item icon-telegram-footer" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
+          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter-footer" target="_blank" rel="noopener"></a>
+          <a href="https://vk.com/ructf" class="link-item icon-vk-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube-footer" target="_blank" rel="noopener"></a>
+          <a href="https://github.com/hackerdom" class="link-item icon-github-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook-footer" target="_blank" rel="noopener"></a>
         </div>
       </div>
     </div>
@@ -235,7 +235,7 @@
           <li><a class="footer-menu-item" href="/en/rules.html">Rules</a></li>
           <li><a class="footer-menu-item" href="/en/participants.html">Participants</a></li>
           <li><a class="footer-menu-item" href="/en/network.html">Network</a></li>
-          <li><a class="footer-menu-item" href="#">Results</a></li>
+          <li><a class="footer-menu-item" href="/en/history.html">Results</a></li>
         <ul>
       </ul></ul></div>
     </div>
@@ -243,9 +243,9 @@
       <div class="footer-title">Conference</div>
       <div class="footer-grid-menu-wrapper">
         <ul>
-          <li><a class="footer-menu-item" href="#">Schedule</a></li>
+          <li><a class="footer-menu-item" href="/en/schedule.html">Schedule</a></li>
           <li><a class="footer-menu-item" href="#">Speakers</a></li>
-          <li><a class="footer-menu-item" href="#">Lectures</a></li>
+          <li><a class="footer-menu-item" href="/en/report.html">Lectures</a></li>
           <li><a class="footer-menu-item" href="#">Records</a></li>
         <ul>
       </ul></ul></div>
@@ -256,5 +256,5 @@
       <a class="phone" href="tel:+79995655535">+7 999 565 55 35</a>
     </div>
   </footer>
-<script src=".././js/main.14a66db8fdc6c4a2fce9.js"></script></body>
+<script src=".././js/main.34bc1bb680490ac71716.js"></script></body>
 </html>

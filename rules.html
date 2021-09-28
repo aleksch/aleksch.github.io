@@ -5,21 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ПРАВИЛА RuCTF</title>
-<link href="style.40ef25083fcee1c3ccc9.css" rel="stylesheet"></head>
+<link href="style.4136363f9f11b286c2c1.css" rel="stylesheet"></head>
 <body class="rules-page">
   <header class="header">
-    <div class="header__logo">
-      <img src="images/hackerdom_176.96f2450be1cb255c7e157d4dbfde5eb0.svg">
-    </div>
-    <div class="header__main-logo">
+    <a class="header__logo" href="/">
+      <img src="images/header-man-logo.19cc6ba3e6e77d2bb8d67428b90c2996.svg">
+    </a>
+    <a class="header__main-logo" href="/">
       <img src="images/path185.eed2ca2d4d9ca06795057c269e4c3ccb.svg">
-    </div>
+    </a>
     <div class="header__menu">
       <nav class="header__nav">
         <ul class="nav-menu">
           <li id="about" class="nav-menu__item">
             <div class="item__text-arrow">
-              <span class="item-text">О&nbsp;RuCTF</span>
+              <span class="item-text-initial">О&nbsp;RuCTF</span>
               <div class="item-arrow"></div>
             </div>
             <ul class="submenu">
@@ -31,7 +31,7 @@
           </li>
           <li class="nav-menu__item">
             <div class="item__text-arrow">
-              <span class="item-text">Сревнования</span>
+              <span class="item-text">Соревнования</span>
               <div class="item-arrow"></div>
             </div>
             <ul class="submenu">
@@ -51,8 +51,8 @@
             </div>
             <ul class="submenu">
               <li class="submenu__item"><a href="/schedule.html">Расписание</a></li>
-              <li class="submenu__item"><a href="#">Доклады</a></li>
-              <li class="submenu__item"><a href="#">Записи</a></li>
+              <li class="submenu__item"><a href="/report.html">Доклады</a></li>
+              <li class="submenu__item"><a href="/report.html">Записи</a></li>
             </ul>
           </li>
           <li class="nav-menu__item"><a href="/contacts.html">КОНТАКТЫ</a></li>
@@ -142,25 +142,25 @@
     <section class="rules-points-accrual">
       <div class="section-title">Начисление баллов</div>
       <div class="description">
-        <p>Ключевыми понятиями в начислении очков являются понятия SLA и FlagPoints. Эти величины индивидуальны для каждого сервиса каждой команды. В каждый момент времени очки команды вычисляются как сумма попарных произведений SLA сервиса на FlagPoints сервиса для всех сервисов.</p>
-        <p>
+        <p class="description__item">Ключевыми понятиями в начислении очков являются понятия SLA и FlagPoints. Эти величины индивидуальны для каждого сервиса каждой команды. В каждый момент времени очки команды вычисляются как сумма попарных произведений SLA сервиса на FlagPoints сервиса для всех сервисов.</p>
+        <p class="description__item">
           <b>SLA(team, service)</b>
           <span> — это доля от прошедшего игрового времени, в течение которой данный сервис у данной команды был в состоянии UP. Например, если сервис ни разу за прошедшее игровое время не опускался, SLA будет равен 1. Если прошло 4 часа игры, и сервис работал первый час, а потом опустился на 3 часа, SLA будет равен 0.25.</span>
         </p>
-        <p>
+        <p class="description__item">
           <b>FlagPoints(team, service)</b>
           <span> — это неотрицательное число, которое коррелирует с тем, насколько хорошо команда понимает данный сервис. Если команда умеет эксплуатировать уязвимости в этом сервисе, и закрыла их у себя, ее FlagPoints будет расти. Если она не умеет эксплуатировать уязвимости в этом сервисе и не озаботилась их закрытием, ее FlagPoints будет стремительно приближаться к нулю в результате атак других команд. Если она закрыла уязвимости, но не научилась их эксплуатировать, ее FlagPoints не будет меняться. В начале игры значение FlagPoints всех сервисов у всех команд равно количеству команд в игре.</span>
         </p>
-        <p>
+        <p class="description__item">
           <b>Стоимость флага</b>
           <span> — это количество FlagPoints, которое получает атакующая команда и, соответственно, теряет атакуемая за захваченный флаг, сданный атакующей командой в проверяющую систему. Это число зависит от мест в скорборде, занимаемых атакующей и атакуемой командами в прошлом раунде относительно момента сдачи флага. Очки за флаг засчитываются даже если соответствующий сервис атакующей команды не был в состоянии UP.</span>
         </p>
-        <p>
+        <p class="description__item">
           <b>Время жизни флага</b>
           <span> — это количество времени, в течение которого флаг должен быть доступен в сервисе для запросов проверяющей системы. Для получения FlagPoints, команде нужно успеть захватывать и сдавать в проверяющую систему флаги до того как у них истекает время жизни.</span>
         </p>
-        <p>Если флаг захватывается у команды, находившейся в скорборде выше атакующей в предыдущем раунде, то за него атакующей команде начисляется максимальное количество FlagPoints. Это число равно количеству играющих команд. В противном случае, начисляемое количество FlagPoints экспоненциально падает от максимального к 1. Атакуемая команда, соответственно, теряет то же самое количество FlagPoints, но их итоговое количество у нее никогда не опускается ниже нуля.</p>
-        <p>К счастью, весь этот сложный текст можно лаконично изложить в виде псевдокода:</p>
+        <p class="description__item">Если флаг захватывается у команды, находившейся в скорборде выше атакующей в предыдущем раунде, то за него атакующей команде начисляется максимальное количество FlagPoints. Это число равно количеству играющих команд. В противном случае, начисляемое количество FlagPoints экспоненциально падает от максимального к 1. Атакуемая команда, соответственно, теряет то же самое количество FlagPoints, но их итоговое количество у нее никогда не опускается ниже нуля.</p>
+        <p class="description__item">К счастью, весь этот сложный текст можно лаконично изложить в виде псевдокода:</p>
       </div>
       <div class="code-listing">
       <pre>
@@ -175,7 +175,7 @@
     service = flag.service
     max = number_of_teams
 
-  flag_score = attacker_pos > victim_pos ? max : exp(log(max) * (max - victim_pos) / (max - attacker_pos))
+  <code>flag_score = attacker_pos > victim_pos ? max : exp(log(max) * (max - victim_pos) / (max - attacker_pos))</code>
 
   attacker.flagpoints[service] += flag_score
   victim.flagpoints[service] -= min(victim.flagpoints[service], flag_score)
@@ -185,7 +185,7 @@
     zip(team.sla, team.flagpoints)))
     </pre>
     </div>
-    <p>Помимо текущих результатов, скорборд отображает SLA, FlagPoints и статус каждого сервиса у каждой команды. Статусы бывают такими:</p>
+    <p class="description__item">Помимо текущих результатов, скорборд отображает SLA, FlagPoints и статус каждого сервиса у каждой команды. Статусы бывают такими:</p>
     <p>
       <span>— UP означает, что сервис доступен по сети, отвечает на запросы и ведет себя так, как того ожидает проверяющая система.</span>
       <br>
@@ -205,13 +205,13 @@
       <div class="footer-links">
         <div class="footer-title">Новости</div>
         <div class="footer-links-wrapper">
-          <a class="link-item icon-telegram" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
-          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter" target="_blank" rel="noopener"></a>
-          <a href="https://vk.com/ructf" class="link-item icon-vk" target="_blank" rel="noopener"></a>
-          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube" target="_blank" rel="noopener"></a>
-          <a href="https://github.com/hackerdom" class="link-item icon-github" target="_blank" rel="noopener"></a>
-          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta" target="_blank" rel="noopener"></a>
-          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook" target="_blank" rel="noopener"></a>
+          <a class="link-item icon-telegram-footer" target="_blank" rel="noopener" href="https://t.me/ructf_en"></a>
+          <a href="https://twitter.com/intent/follow?screen_name=RuCTF" class="link-item icon-twitter-footer" target="_blank" rel="noopener"></a>
+          <a href="https://vk.com/ructf" class="link-item icon-vk-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.youtube.com/channel/UCg7OyAkRMnGQurEsCzMoRYw" class="link-item icon-youtube-footer" target="_blank" rel="noopener"></a>
+          <a href="https://github.com/hackerdom" class="link-item icon-github-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.instagram.com/hackerdom.ru/" class="link-item icon-insta-footer" target="_blank" rel="noopener"></a>
+          <a href="https://www.facebook.com/ructf" class="link-item icon-facebook-footer" target="_blank" rel="noopener"></a>
         </div>
       </div>
     </div>
@@ -227,7 +227,7 @@
       </ul></ul></div>
     </div>
     <div class="footer-competitions">
-      <div class="footer-title">Сревнования</div>
+      <div class="footer-title">Соревнования</div>
       <div class="footer-grid-menu-wrapper">
         <ul>
           <li><a class="footer-menu-item" href="/schedule.html">Расписание</a></li>
@@ -235,7 +235,7 @@
           <li><a class="footer-menu-item" href="/rules.html">Правила</a></li>
           <li><a class="footer-menu-item" href="/participants.html">Участники</a></li>
           <li><a class="footer-menu-item" href="/network.html">Схема сети</a></li>
-          <li><a class="footer-menu-item" href="#">Результаты</a></li>
+          <li><a class="footer-menu-item" href="/history.html">Результаты</a></li>
         <ul>
       </ul></ul></div>
     </div>
@@ -243,9 +243,9 @@
       <div class="footer-title">Конференция</div>
       <div class="footer-grid-menu-wrapper">
         <ul>
-          <li><a class="footer-menu-item" href="#">Расписание</a></li>
+          <li><a class="footer-menu-item" href="/schedule.html">Расписание</a></li>
           <li><a class="footer-menu-item" href="#">Спикеры</a></li>
-          <li><a class="footer-menu-item" href="#">Доклады</a></li>
+          <li><a class="footer-menu-item" href="/report.html">Доклады</a></li>
           <li><a class="footer-menu-item" href="#">Записи</a></li>
         <ul>
       </ul></ul></div>
@@ -256,5 +256,5 @@
       <a class="phone" href="tel:+79995655535">+7 999 565 55 35</a>
     </div>
   </footer>
-<script src="./js/main.14a66db8fdc6c4a2fce9.js"></script></body>
+<script src="./js/main.34bc1bb680490ac71716.js"></script></body>
 </html>
